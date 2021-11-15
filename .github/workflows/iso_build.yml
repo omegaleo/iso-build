@@ -45,7 +45,7 @@ jobs:
         ###### EDIT HERE ######
         EDITION: [kde]
         BRANCH: [stable]
-        SCOPE: [minimal, full]
+        SCOPE: [full]
         #######################
     steps:
       - 
