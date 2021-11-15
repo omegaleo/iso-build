@@ -5,7 +5,7 @@ on:
       tag:
         description: 'Define Release Name'     
         required: true
-        default: 'v1.0.0'
+        default: 'OmegaLeoOS-0.0.1'
 
 jobs:
   prepare_release:
