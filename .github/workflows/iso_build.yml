@@ -40,7 +40,7 @@ jobs:
     strategy:
       matrix:
         ###### EDIT HERE ######
-        EDITION: [xfce]
+        EDITION: [kde]
         BRANCH: [stable]
         SCOPE: [minimal, full]
         #######################
