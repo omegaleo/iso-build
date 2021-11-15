@@ -1,8 +1,11 @@
 name: iso_build
 on:
   workflow_dispatch:
-  #schedule:
-  #  - cron:  '30 2 * * *'
+    inputs:
+      tag:
+        description: 'Define Release Name'     
+        required: true
+        default: 'v1.0.0'
 
 jobs:
   prepare_release:
@@ -26,8 +29,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.time.outputs.time }}
-          release_name: Release ${{ steps.time.outputs.time }}
+          tag_name: ${{ github.event.inputs.tag }} 
+          release_name: ${{ github.event.inputs.tag }}
           draft: false
           prerelease: false
     outputs:
