@@ -148,10 +148,12 @@ jobs:
           install_cal_tools
       -
         name: Install MkInitcpio
-        run: |          
-          sudo wget https://git.archlinux.org/mkinitcpio.git/snapshot/mkinitcpio-29.tar.gz
-          sudo tar -xf mkinitcpio-29.tar.gz
-          sudo make -C mkinitcpio-29 install
+        run: |
+          mkInitPkgver=30
+          mkInitfolder=archlinux-mkinitcpio-67472e1
+          sudo wget -O mkinitcpio.tar.gz https://github.com/archlinux/mkinitcpio/tarball/v$mkInitPkgver
+          sudo tar -xf mkinitcpio.tar.gz
+          sudo make -C $mkInitfoldername install
           sudo sed -i -e 's|File|Path|' /usr/share/libalpm/hooks/*hook
       -
         name: Install Manjaro-Tools
