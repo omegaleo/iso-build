@@ -154,9 +154,8 @@ jobs:
           sudo wget -O mkinitcpio.tar.gz https://github.com/archlinux/mkinitcpio/tarball/v$mkInitPkgver
           sudo tar -xf mkinitcpio.tar.gz
           cd $mkInitfoldername
-          sudo make
           ls
-          sudo make install
+          sudo make all
           sudo sed -i -e 's|File|Path|' /usr/share/libalpm/hooks/*hook
       -
         name: Install Manjaro-Tools
