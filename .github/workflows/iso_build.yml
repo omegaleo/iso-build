@@ -149,8 +149,8 @@ jobs:
       -
         name: Install MkInitcpio
         run: |
-          mkInitPkgver=30
-          mkInitfolder=archlinux-mkinitcpio-67472e1
+          mkInitPkgver=29
+          mkInitfolder=archlinux-mkinitcpio-7cb5bf5
           sudo wget -O mkinitcpio.tar.gz https://github.com/archlinux/mkinitcpio/tarball/v$mkInitPkgver
           sudo tar -xf mkinitcpio.tar.gz
           cd $mkInitfoldername
